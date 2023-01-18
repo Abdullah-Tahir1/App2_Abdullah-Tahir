@@ -1,6 +1,5 @@
 package com.example.finalassessment
 
-import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -16,7 +15,6 @@ import kotlinx.android.synthetic.main.info_page.*
 import kotlinx.android.synthetic.main.main_page_1.*
 
 class InfoPage : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.info_page)
@@ -84,17 +82,6 @@ class InfoPage : AppCompatActivity() {
             uranusHeading3.startAnimation(headingsExitFromRightPg1)
             neptuneHeading3.startAnimation(headingsExitFromLeftPg1)
         }
-        /*
-        * 0 = Sun
-        * 1 = Mercury
-        * 2 = Venus
-        * 3 = Earth
-        * 4 = Mars
-        * 5 = Jupiter
-        * 6 = Saturn
-        * 7 = Uranus
-        * 8 = Neptune
-        * */
         when (value) {
             0 -> {
                 planet.setImageResource(R.drawable.sun)

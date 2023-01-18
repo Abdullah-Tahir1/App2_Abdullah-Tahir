@@ -1,5 +1,7 @@
+// package declaration
 package com.example.finalassessment
 
+// import statements
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -11,20 +13,19 @@ import android.os.Handler
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.main_page_1.*
-import kotlinx.android.synthetic.main.main_page_2.*
 
-
+// MainPage1 class definition
 class MainPage1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page_1)
-        //Loading Page 1 Plants Entry Animations
+        //Loading Page 1 Planets Entry Animations
         val sunAnim = AnimationUtils.loadAnimation(this,R.anim.sun_pg1)
         val mercuryAnim = AnimationUtils.loadAnimation(this,R.anim.mercury_pg1)
         val venusAnim = AnimationUtils.loadAnimation(this,R.anim.venus_pg1)
         val earthAnim = AnimationUtils.loadAnimation(this,R.anim.earth_pg1)
         val marsAnim = AnimationUtils.loadAnimation(this,R.anim.mars_pg1)
-        //Loading Page 2 Plants Exit Animations
+        //Loading Page 2 Planets Exit Animations
         val jupiterAnim = AnimationUtils.loadAnimation(this,R.anim.jupiter_pg1)
         val saturnAnim = AnimationUtils.loadAnimation(this,R.anim.saturn_pg1)
         val uranusAnim = AnimationUtils.loadAnimation(this,R.anim.uranus_pg1)
@@ -37,16 +38,20 @@ class MainPage1 : AppCompatActivity() {
         val headingsExitFromRight = AnimationUtils.loadAnimation(this,R.anim.heading_exit_from_right_pg1)
         val headingsExitFromLeft = AnimationUtils.loadAnimation(this,R.anim.heading_exit_from_left_pg1)
 
+        //Loading the page 3 exit Animations
         val planetExit = AnimationUtils.loadAnimation(this,R.anim.main_planet_exit)
         val panelExit = AnimationUtils.loadAnimation(this,R.anim.planet_panel_exit)
 
         //Checker Variable to handle the animations
         val checker = intent.getIntExtra("Checker",0)
 
+        //Loading the Rocket Animation
         val rocketExt = AnimationUtils.loadAnimation(this,R.anim.rocket)
 
+        //Calling the "blockUserInput" to Block any input for 5 seconds
         blockUserInput()
 
+        //Setting up the Exit Animations for Page 3
         when (intent.getIntExtra("Planet",-1)) {
             0 -> {
                 thePlanetPg1.setImageResource(R.drawable.sun)
@@ -113,7 +118,7 @@ class MainPage1 : AppCompatActivity() {
             }
         }
 
-        //Playing animations
+        //Playing animations for different scenarios
         if (checker == 0){
             rocket.startAnimation(rocketExt)
             sun1.startAnimation(sunAnim)
@@ -157,11 +162,14 @@ class MainPage1 : AppCompatActivity() {
             uranusHeading1.startAnimation(headingsExitFromRight)
             neptuneHeading1.startAnimation(headingsExitFromLeft)
         }
+
         //Planets Names TextView Animations
         mercuryHeading1.startAnimation(headingsEntryToRight)
         venusHeading1.startAnimation(headingsEntryToLeft)
         earthHeading1.startAnimation(headingsEntryToRight)
         marsHeading1.startAnimation(headingsEntryToLeft)
+
+        //Popup
         popupBtnPg1.setOnClickListener(){
             val myDialoug = Dialog(this)
             myDialoug.setContentView(R.layout.dialoug_box)
@@ -169,11 +177,15 @@ class MainPage1 : AppCompatActivity() {
             myDialoug.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             myDialoug.show()
         }
+
+        //Arrow for the next page
         nextPg1.setOnClickListener {
             val intent = Intent(this,MainPage2::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
+
+        //All the Planet Buttons
         sun1.setOnClickListener {
             val intent = Intent(this,InfoPage::class.java)
             intent.putExtra("var",0)
