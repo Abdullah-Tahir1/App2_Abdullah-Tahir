@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/man_screen"
+    tools:context=".MainPage1">
+
+    <ImageView
+        android:id="@+id/popupBtnPg1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/popup_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/sun1"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_marginEnd="-120dp"
+        android:layout_marginBottom="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationZ="10dp"
+        app:srcCompat="@drawable/sun"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/mercury1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="155dp"
+        android:rotation="-60"
+        android:translationZ="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mercury" />
+
+    <ImageView
+        android:id="@+id/venus1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="130dp"
+        android:translationZ="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/venus" />
+
+    <ImageView
+        android:id="@+id/earth1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="120dp"
+        android:rotation="90"
+        android:translationZ="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/earth" />
+
+    <ImageView
+        android:id="@+id/mars1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="125dp"
+        android:rotation="50"
+        android:translationZ="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mars" />
+
+    <ImageView
+        android:id="@+id/nextPg1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/jupiter1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="750dp"
+        android:layout_marginEnd="70dp"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jupiter" />
+
+    <ImageView
+        android:id="@+id/saturn1"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="750dp"
+        android:layout_marginEnd="5dp"
+        android:translationZ="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/saturn" />
+
+    <ImageView
+        android:id="@+id/uranus1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="750dp"
+        android:layout_marginEnd="104dp"
+        android:translationZ="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uranus" />
+
+    <ImageView
+        android:id="@+id/neptune1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="750dp"
+        android:layout_marginEnd="104dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/neptune" />
+
+    <TextView
+        android:id="@+id/mercuryHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="80dp"
+        android:text="Mercury"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/cormorant_regular"
+        android:translationZ="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/venusHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="225dp"
+        android:text="Venus"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="7dp"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/earthHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:layout_marginEnd="68dp"
+        android:text="Earth"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="6dp"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/marsHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="243dp"
+        android:text="Mars"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="5dp"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jupiterHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="135dp"
+        android:text="Jupiter"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="4dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/saturnHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="170dp"
+        android:text="Saturn"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="3dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/uranusHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="170dp"
+        android:text="Uranus"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="2dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/neptuneHeading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="625dp"
+        android:layout_marginEnd="150dp"
+        android:text="Neptune"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:translationZ="1dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/thePlanetPg1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/earth"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/planetPanelPg1"
+        android:layout_width="match_parent"
+        android:layout_height="411dp"
+        android:layout_marginBottom="-28dp"
+        android:src="@drawable/earth_panel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/planetNamePg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="366dp"
+        android:text="Earth"
+        android:textColor="#FFFFFF"
+        android:textSize="60dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/country_kitchen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/planetLocationPg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="268dp"
+        android:text="Third Planet"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/planetInfoPg1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="465dp"
+        android:padding="0dp"
+        android:text="Info"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:fontFamily="@font/cormorant_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/underlinePg1"
+        android:layout_width="79dp"
+        android:layout_height="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/border2"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rocket"
+        android:layout_width="127dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="-250dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rocket" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

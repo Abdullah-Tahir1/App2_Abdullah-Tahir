@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:background="#928191"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:text="Welcome to Solar Safari!"
+                    android:fontFamily="@font/country_kitchen"
+                    android:textColor="@color/white"
+                    android:textSize="34dp"></TextView>
+
+                <TextView
+                    android:id="@+id/underline"
+                    android:layout_width="350dp"
+                    android:layout_height="3dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="95dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="100dp"
+                    android:background="@drawable/border1"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:paddingTop="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:fontFamily="@font/cormorant_regular"
+                    android:text="The app is pretty easy to use and simple. You just click on any planet you like and it will give you a brief on that planet. So go on, explore the solar system."
+                    android:textColor="@color/white"
+                    android:textSize="16dp">
+                </TextView>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/gotIt"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:paddingTop="20dp"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/country_kitchen"
+                    android:text="Click the empty \nspace to continue"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
