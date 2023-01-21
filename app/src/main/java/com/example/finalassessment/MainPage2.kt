@@ -1,5 +1,6 @@
 package com.example.finalassessment
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -10,11 +11,11 @@ import android.os.CountDownTimer
 import android.os.Handler
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
-import kotlinx.android.synthetic.main.info_page.*
-import kotlinx.android.synthetic.main.main_page_1.*
 import kotlinx.android.synthetic.main.main_page_2.*
 
+@Suppress("DEPRECATION")
 class MainPage2 : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page_2)
@@ -118,7 +119,7 @@ class MainPage2 : AppCompatActivity() {
             planetNamePg2.startAnimation(panelExit)
             planetPanelPg2.startAnimation(panelExit)
             thePlanetPg2.startAnimation(planetExit)
-            underlinePg2.startAnimation(planetExit)
+            underlinePg2.startAnimation(panelExit)
             jupiter2.startAnimation(jupiterAnim)
             saturn2.startAnimation(saturnAnim)
             uranus2.startAnimation(uranusAnim)
@@ -173,15 +174,15 @@ class MainPage2 : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
-        popupBtnPg2.setOnClickListener(){
-            val myDialoug = Dialog(this)
-            myDialoug.setContentView(R.layout.dialoug_box)
-            myDialoug.setCancelable(true)
-            myDialoug.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            myDialoug.show()
+        popupBtnPg2.setOnClickListener {
+            val myDialog = Dialog(this)
+            myDialog.setContentView(R.layout.dialoug_box)
+            myDialog.setCancelable(true)
+            myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            myDialog.show()
         }
     }
-    fun blockUserInput() {
+    private fun blockUserInput() {
         val inputBlocker = object : CountDownTimer(7500, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val handler = Handler()

@@ -2,6 +2,7 @@
 package com.example.finalassessment
 
 // import statements
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -15,7 +16,9 @@ import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.main_page_1.*
 
 // MainPage1 class definition
+@Suppress("DEPRECATION")
 class MainPage1 : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page_1)
@@ -119,48 +122,50 @@ class MainPage1 : AppCompatActivity() {
         }
 
         //Playing animations for different scenarios
-        if (checker == 0){
-            rocket.startAnimation(rocketExt)
-            sun1.startAnimation(sunAnim)
-            mercury1.startAnimation(mercuryAnim)
-            venus1.startAnimation(venusAnim)
-            earth1.startAnimation(earthAnim)
-            mars1.startAnimation(marsAnim)
-            popupBtnPg1.startAnimation(arrowAnim)
-            nextPg1.startAnimation(arrowAnim)
-        }
-        else if(checker == 1){
-            planetInfoPg1.startAnimation(panelExit)
-            planetLocationPg1.startAnimation(panelExit)
-            planetNamePg1.startAnimation(panelExit)
-            planetPanelPg1.startAnimation(panelExit)
-            thePlanetPg1.startAnimation(planetExit)
-            underlinePg1.startAnimation(planetExit)
-            sun1.startAnimation(sunAnim)
-            mercury1.startAnimation(mercuryAnim)
-            venus1.startAnimation(venusAnim)
-            earth1.startAnimation(earthAnim)
-            mars1.startAnimation(marsAnim)
-            nextPg1.startAnimation(arrowAnim)
-            popupBtnPg1.startAnimation(arrowAnim)
-        }
-        else{
-            sun1.startAnimation(sunAnim)
-            mercury1.startAnimation(mercuryAnim)
-            venus1.startAnimation(venusAnim)
-            earth1.startAnimation(earthAnim)
-            mars1.startAnimation(marsAnim)
-            jupiter1.startAnimation(jupiterAnim)
-            saturn1.startAnimation(saturnAnim)
-            uranus1.startAnimation(uranusAnim)
-            neptune1.startAnimation(neptuneAnim)
-            nextPg1.startAnimation(arrowAnim)
-            popupBtnPg1.startAnimation(arrowAnim)
-            //comment
-            jupiterHeading1.startAnimation(headingsExitFromRight)
-            saturnHeading1.startAnimation(headingsExitFromLeft)
-            uranusHeading1.startAnimation(headingsExitFromRight)
-            neptuneHeading1.startAnimation(headingsExitFromLeft)
+        when (checker) {
+            0 -> {
+                rocket.startAnimation(rocketExt)
+                sun1.startAnimation(sunAnim)
+                mercury1.startAnimation(mercuryAnim)
+                venus1.startAnimation(venusAnim)
+                earth1.startAnimation(earthAnim)
+                mars1.startAnimation(marsAnim)
+                popupBtnPg1.startAnimation(arrowAnim)
+                nextPg1.startAnimation(arrowAnim)
+            }
+            1 -> {
+                planetInfoPg1.startAnimation(panelExit)
+                planetLocationPg1.startAnimation(panelExit)
+                planetNamePg1.startAnimation(panelExit)
+                planetPanelPg1.startAnimation(panelExit)
+                thePlanetPg1.startAnimation(planetExit)
+                underlinePg1.startAnimation(panelExit)
+                sun1.startAnimation(sunAnim)
+                mercury1.startAnimation(mercuryAnim)
+                venus1.startAnimation(venusAnim)
+                earth1.startAnimation(earthAnim)
+                mars1.startAnimation(marsAnim)
+                nextPg1.startAnimation(arrowAnim)
+                popupBtnPg1.startAnimation(arrowAnim)
+            }
+            else -> {
+                sun1.startAnimation(sunAnim)
+                mercury1.startAnimation(mercuryAnim)
+                venus1.startAnimation(venusAnim)
+                earth1.startAnimation(earthAnim)
+                mars1.startAnimation(marsAnim)
+                jupiter1.startAnimation(jupiterAnim)
+                saturn1.startAnimation(saturnAnim)
+                uranus1.startAnimation(uranusAnim)
+                neptune1.startAnimation(neptuneAnim)
+                nextPg1.startAnimation(arrowAnim)
+                popupBtnPg1.startAnimation(arrowAnim)
+                //comment
+                jupiterHeading1.startAnimation(headingsExitFromRight)
+                saturnHeading1.startAnimation(headingsExitFromLeft)
+                uranusHeading1.startAnimation(headingsExitFromRight)
+                neptuneHeading1.startAnimation(headingsExitFromLeft)
+            }
         }
 
         //Planets Names TextView Animations
@@ -170,12 +175,12 @@ class MainPage1 : AppCompatActivity() {
         marsHeading1.startAnimation(headingsEntryToLeft)
 
         //Popup
-        popupBtnPg1.setOnClickListener(){
-            val myDialoug = Dialog(this)
-            myDialoug.setContentView(R.layout.dialoug_box)
-            myDialoug.setCancelable(true)
-            myDialoug.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            myDialoug.show()
+        popupBtnPg1.setOnClickListener {
+            val myDialog = Dialog(this)
+            myDialog.setContentView(R.layout.dialoug_box)
+            myDialog.setCancelable(true)
+            myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            myDialog.show()
         }
 
         //Arrow for the next page
@@ -217,7 +222,7 @@ class MainPage1 : AppCompatActivity() {
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
-    fun blockUserInput() {
+    private fun blockUserInput() {
         val inputBlocker = object : CountDownTimer(7500, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val handler = Handler()

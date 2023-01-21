@@ -10,6 +10,16 @@
     <string name="saturn_info">Saturn is the second-largest planet in the Solar System. It has a diameter of about 116,460 km and a mass of about 5.683 x 10^26 kg. Saturn has 82 known natural satellites. Saturn\s atmosphere is composed mostly of hydrogen and helium, and it has a distinct layer of colorful clouds. Saturn is best known for its rings, which are made up of billions of ice particles of various sizes. The rings are divided into several distinct parts, and the largest of these, the B ring, is the most complex. Saturn has a strong magnetic field and generates intense radiation belts. It completes an orbit around the Sun in about 29.5 Earth years and rotates on its axis once every 10 hours and 39 minutes.</string>
     <string name="uranus_info">Uranus has a diameter of about 50,724 km and a mass of about 8.681 x 10^25 kg. Uranus has 27 known natural satellites. Uranus has a very distinctive feature, it rotates on its axis in a nearly horizontal position, which means that its poles are almost in the plane of its orbit. Uranus\'s atmosphere is composed mostly of hydrogen and helium, with small amounts of methane, which gives the planet its blue-green color. Uranus has a weak magnetic field and generates weak radiation belts. Uranus also has a set of thin rings, which were discovered in 1977. It completes an orbit around the Sun in about 84.01 Earth years and rotates on its axis once every 17 hours and 14 minutes.</string>
     <string name="neptune_info">Neptune is the farthest planet from the Sun in the Solar System. It has a diameter of about 49,244 km and a mass of about 1.024 x 10^26 kg. Neptune has 14 known natural satellites. Like Uranus, Neptune\'s atmosphere is composed mostly of hydrogen and helium, with small amounts of methane, which gives the planet its blue color. The most notable feature in Neptune\'s atmosphere is the Great Dark Spot, which is a gigantic storm similar to Jupiter\'s Great Red Spot. Neptune also has a set of thin rings. It completes an orbit around the Sun in about 164.8 Earth years and rotates on its axis once every 16 hours and 6 minutes.</string>
+    <string name="mercury">Mercury</string>
+    <string name="venus">Venus</string>
+    <string name="earth">Earth</string>
+    <string name="mars">Mars</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="info">Info</string>
+    <string name="third_planet">Third Planet</string>
+    <string name="neptune">Neptune</string>
+    <string name="uranus">Uranus</string>
+    <string name="saturn">Saturn</string>
 
 </resources>
 
